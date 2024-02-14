@@ -24,9 +24,12 @@ const Update = () => {
       .update({ title, method, rating })
       .eq('id', id).select()
 
+    console.log('>', error)
+
     if (error) {
       console.log(error)
       setFormError('Please fill in all the fields correctly.')
+      return
     }
     if (data) {
       console.log(data)
